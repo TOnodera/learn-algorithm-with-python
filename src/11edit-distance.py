@@ -4,8 +4,9 @@ INF = 1 << 29
 S = "logistic"
 T = "algorithm"
 
-dp = [[0 for _ in range(len(T) + 1)] for _ in range(len(S) + 1)]
+dp = [[INF for _ in range(len(T) + 1)] for _ in range(len(S) + 1)]
 
+dp[0][0] = 0
 
 for i in range(len(S) + 1):
     for j in range(len(T) + 1):
