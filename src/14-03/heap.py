@@ -27,6 +27,7 @@ class Heap:
         while i * 2 + 1 < len(self.heap):
             child_left = i * 2 + 1
             child_right = i * 2 + 2
+            # 兄弟間で左側が大きくなるようにする
             if (
                 child_right < len(self.heap)
                 and self.heap[child_left] < self.heap[child_right]
@@ -36,6 +37,7 @@ class Heap:
             if self.heap[child_left] <= x:
                 break
 
+            # 親と入れ替える
             self.heap[i] = self.heap[child_left]
             i = child_left
 
