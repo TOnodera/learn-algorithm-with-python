@@ -3,7 +3,9 @@ def dfs(G, v):
         if dist[next_v] != -1:
             continue
         dist[next_v] = dist[v] + 1
+        print("行きがけ: ", v)
         dfs(G, next_v)
+        print("帰りがけ: ", v)
 
 
 # DFS
@@ -17,8 +19,6 @@ for i in range(M):
 dist = [-1] * N
 dist[0] = 0
 
-
 dfs(G, 0)
-
 
 print(dist)
