@@ -16,11 +16,8 @@ dist[0] = 0
 
 queue.put(0)
 
-# スタックに次に探索するべき頂点が入っているので
-# 探索する頂点がなくなるまでループする
 while not queue.empty():
     v = queue.get()
-    # その頂点からいける（たどれる）頂点を一個ずつ調べる
     for next_v in G[v]:
         if dist[next_v] != -1:
             continue
